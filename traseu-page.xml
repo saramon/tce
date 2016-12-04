@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:app="."
+      navigatedTo="pageNavigatedTo"
+      class="page">
+  <Page.actionBar>
+      <ActionBar title="Transport public Ploiești" class="action-bar">
+        <NavigationButton tap="goBack" text="Înapoi" android.systemIcon="ic_menu_back"></NavigationButton>
+      </ActionBar>
+  </Page.actionBar>
+  <app:traseu-view />
+</Page>

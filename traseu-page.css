@@ -1,0 +1,50 @@
+.primele_detalii{
+    margin-top: 20px;
+}
+.numarTraseu{
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    font-size: 25;
+}
+.icon_autovehicul{
+    width: 30px;
+    margin: 5px;
+}
+.tip_autovehicul{
+    width: 100%;
+    background-color: #3d5afe;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.numeTraseu{
+    font-size: 18;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    color:#3d5afe;
+}
+.statii{
+    padding: 30px;
+}
+.statii_tur_retur{
+    margin-right: 4px;
+}
+.tur_retur{
+    background-color: lightslategray;
+    padding: 10px 0 10px 10px;
+    font-weight: bold;
+    font-size: 18;
+    color: #FFF;
+}
+.statie{
+    padding: 10px 0 10px 10px;
+    font-size:18;
+    vertical-align: middle;
+}
+.fa.statie{
+    font-size:22;
+    color:#3d5afe;
+    vertical-align: middle;
+}

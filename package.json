@@ -1,0 +1,23 @@
+{
+	"name": "transport-public-ploiesti",
+	"main": "app.js",
+	"version": "0.1",
+	"author": "Hontryke <contact@hontryke.com>",
+	"description": "Transport public Ploiesti ofera informatii despre traseele TCE din Ploiesti.",
+	"keywords": [
+		"ploiesti",
+		"transport",
+		"transport public",
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/NativeScript/template-hello-world.git"
+	},
+	"bugs": {
+		"url": "https://github.com/NativeScript/template-hello-world/issues"
+	},
+	"homepage": "https://github.com/NativeScript/template-hello-world",
+	"android": {
+		"v8Flags": "--expose_gc"
+	}
+}

@@ -1,0 +1,79 @@
+﻿.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
+
+.action-bar{background-color:#3d5afe;color:#fff}
+.action-bar .action-bar-title{font-weight:bold;font-size:17;vertical-align:center}
+.action-bar .action-item{font-weight:normal}
+.hr-dark{height:1;background-color:#3d5afe;width:100%}
+
+.drawer-content {
+  background-color: #3d5afe;
+  color: white;
+  padding-top: 20;
+}
+.drawer-content label {
+  font-size: 20;
+  margin: 10 0 15 25;
+}
+.selected {
+  color: #e4ba4e;
+}
+
+.tab-content {
+    vertical-align: center;
+    color: #808080;
+    font-size: 24;
+}
+
+.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+    margin: 0 20;
+    text-align: center;
+}
+
+button{
+    background-color:#3d5afe;
+    width:300px;
+    border:none;
+    horizontal-align: center;
+    font-size: 17;
+    color: white;
+}
+
+.numeTraseu{
+    font-size: 15;
+    vertical-align: middle;
+}
+.numarTraseu{
+    width: 15%;
+    background-color: #3d5afe;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 20;
+}
+.icon_autovehicul{
+    width: 24px;
+    margin: 5px;
+}
+table{
+    width: 100%;
+}
+.blue_card{
+    background-color: #3d5afe;
+    color: white;
+}
+.subtitlu{
+    color: #3d5afe;
+    padding: 30px;
+    font-size: 25;
+}

@@ -1,0 +1,70 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:widgets="shared/widgets"
+      xmlns:statusbar="nativescript-statusbar"
+      navigatingTo="onNavigatingTo" 
+      loaded="pageLoaded" 
+      class="page">
+
+  <Page.actionBar>
+    <ActionBar title="Transport public Ploiești" class="action-bar">
+      <navigation-button icon="res://ic_menu" tap="toggleDrawer" ios:visibility="collapsed" />
+      <action-bar.actionItems>
+        <ios>
+          <action-item icon="res://ic_menu" ios.position="left" tap="toggleDrawer" />
+        </ios>
+      </action-bar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+
+      <!-- Home page contents -->
+      <TabView selectedIndex="0" selectedColor="#FFFF00" color="#FFF" style="font-size:15" >
+        <TabView.items>
+          <TabViewItem title="Toate traseele" >
+            <TabViewItem.view>
+              <StackLayout class="tab-content">
+                <ListView items="{{ listaTrasee }}" itemTap="traseu"> 
+                  <ListView.itemTemplate>
+                    <GridLayout rows="auto,auto" columns="auto,auto,*">
+                      <Label id="numar" text="{{numar}}" class="numarTraseu" row="0" col="0" />
+                      <Image class="icon_autovehicul" src="{{icon_autovehicul}}" row="0" col="1" />
+                      <Label id="nume_traseu" text="{{nume_traseu}}" textWrap="true" class="numeTraseu" row="0" col="2" />
+                    </GridLayout>
+                  </ListView.itemTemplate>
+                </ListView>
+              </StackLayout>
+            </TabViewItem.view>
+          </TabViewItem>
+          <TabViewItem class="tab_title" title="Caută traseu">
+            <TabViewItem.view>
+              <StackLayout class="tab-content">
+                <Label text="Caută traseu" class="subtitlu" style="text-align:center" />
+                <TextField id="cautare" width="300px" text="{{cauta_keyword}}" hint="număr/stație/stradă" />
+                <Button text="Caută" class="buton_cauta" tap="cauta" />
+                <ListView items="{{ listaTraseeCautare }}" itemTap="traseu">
+                  <ListView.itemTemplate>
+                    <GridLayout rows="auto,auto" columns="auto,auto,auto">
+                      <Label id="numar" text="{{numar}}" class="numarTraseu" row="0" col="0" />
+                      <Image class="icon_autovehicul" src="{{icon_autovehicul}}" row="0" col="1" />
+                      <Label id="nume_traseu" text="{{nume_traseu}}" textWrap="true" class="numeTraseu" row="0" col="2" />
+                    </GridLayout>
+                  </ListView.itemTemplate>
+                </ListView>
+              </StackLayout>
+            </TabViewItem.view>
+          </TabViewItem>
+        </TabView.items>
+      </TabView>
+
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+
+
+</Page>

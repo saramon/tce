@@ -1,0 +1,37 @@
+<StackLayout  
+      xmlns="http://schemas.nativescript.org/tns.xsd" 
+>
+  <GridLayout rows="auto,auto" columns="auto,auto" horizontalAlignment="center" class="primele_detalii" >
+    <Label id="numar" text="{{numar}}" class="numarTraseu" row="0" col="0" />
+    <Image class="icon_autovehicul" src="{{icon_autovehicul}}" row="0" col="1" />
+  </GridLayout>
+  <Label class="tip_autovehicul" text="{{tip_autovehicul}}" />
+  <Label id="nume_traseu" text="{{nume_traseu}}" textWrap="true" class="numeTraseu" row="0" col="2" horizontalAlignment="center"  />
+  <StackLayout class="hr-dark"></StackLayout>
+  <ScrollView>
+    <GridLayout rows="*,*" columns="*,*" horizontalAlignment="center" class="statii" >
+      <StackLayout row="0" col="0" class="statii_tur_retur">
+        <Label class="tur_retur" text="TUR" />
+        <repeater items="{{ statii_tur }}"> 
+          <repeater.itemTemplate>
+            <GridLayout rows="*,*" columns="auto,*" >
+              <Label class="fa statie" text="{{'fa-map-marker' | fonticon}}" col="0"></Label>
+              <Label id="statie" text="{{nume_statie}}" class="statie" textWrap="true" col="1" />
+            </GridLayout>
+          </repeater.itemTemplate>
+        </repeater>
+      </StackLayout>
+      <StackLayout row="0" col="1" height="100%" class="statii_tur_retur">
+        <Label class="tur_retur" text="RETUR" />
+        <repeater items="{{ statii_retur }}"> 
+          <repeater.itemTemplate>
+            <GridLayout rows="*,*" columns="auto,*" >
+              <Label class="fa statie" text="{{'fa-map-marker' | fonticon}}" col="0"></Label>
+              <Label id="statie" text="{{nume_statie}}" class="statie" textWrap="true" col="1" />
+            </GridLayout>
+          </repeater.itemTemplate>
+        </repeater>
+      </StackLayout>
+    </GridLayout>
+  </ScrollView>
+</StackLayout>

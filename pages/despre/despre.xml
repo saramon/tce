@@ -1,0 +1,36 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  loaded="pageLoaded">
+
+  <page.actionBar>
+    <action-bar title="Despre" class="action-bar">
+      <navigation-button icon="res://ic_menu" tap="toggleDrawer" ios:visibility="collapsed" />
+      <action-bar.actionItems>
+        <ios>
+          <action-item icon="res://ic_menu" ios.position="left" tap="toggleDrawer" />
+        </ios>
+      </action-bar.actionItems>
+    </action-bar>
+  </page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+
+      <!-- Despre page contents -->
+      <scroll-view style="margin-bottom:30px">
+        <stack-layout style="padding:0 30px">
+          <Label class="subtitlu" text="Despre aplicație" />
+          <HtmlView html="<strong>Transport Public Ploiești by HONTRYKE</strong> este o inițiativă independentă, open-source și nu este afiliată în niciun fel cu Transport Călători Ploiești (TCE), compania care administrează transportul public din orașul Ploiești. " />
+          <Label textWrap="true" style="margin:20px 0" text="Ne puteți contacta pentru detalii sau sugestii la contact@hontryke.com." />
+          <HtmlView html="Icon-urile utilizate în aplicație sunt preluate de pe <a href='http://icon8.com'>Icon8</a> sub licență <a href='https://creativecommons.org/licenses/by-nd/3.0/'>Creative Commons Attribution-NoDerivs 3.0 Unported</a>." />
+        </stack-layout>
+      </scroll-view>
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>

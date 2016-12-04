@@ -1,0 +1,101 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:Card="nativescript-cardview"
+  loaded="pageLoaded"
+  navigatedTo="navigatedTo">
+
+  <page.actionBar>
+    <action-bar class="action-bar" title="Tarife">
+      <navigation-button icon="res://ic_menu" tap="toggleDrawer" ios:visibility="collapsed" />
+      <action-bar.actionItems>
+        <ios>
+          <action-item icon="res://ic_menu" ios.position="left" tap="toggleDrawer" />
+        </ios>
+      </action-bar.actionItems>
+    </action-bar>
+  </page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+
+      <!-- Tarife page content -->
+      <scroll-view style="margin-bottom:30px">
+        <stack-layout>
+          <Label class="subtitlu" text="Legitimații de călătorie" />
+            <grid-layout rows="*" columns="*, *, *">
+                <Card:CardView col="0" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Bilet" textWrap="true" class="size16" row="0" />
+                        <label text="1 călătorie" textWrap="true" class="size16" row="1" />
+                        <label text="2 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+                <Card:CardView col="1" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Bilet" textWrap="true" class="size16" row="0" />
+                        <label text="2 călătorii" textWrap="true" class="size16" row="1" />
+                        <label text="4 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+                <Card:CardView col="2" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Legitimație" textWrap="true" class="size16" row="0" />
+                        <label text="1 zi" textWrap="true" class="size16" row="1" />
+                        <label text="7 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+            </grid-layout>
+          <Label text="*Legitimațiile de călătorie pot fi achiziționate de la tonetele și automatele TCE sau prin SMS la 7445." textWrap="true" style="padding:0 30px"  />
+          <Label class="subtitlu" text="Abonamente standard" />
+            <grid-layout rows="*" columns="*, *">
+                <Card:CardView col="0" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Lunar" textWrap="true" class="size16" row="0" />
+                        <label text="toate traseele urbane" textWrap="true" class="size16" row="1" />
+                        <label text="63 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+                <Card:CardView col="1" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Săptămânal" textWrap="true" class="size16" row="0" />
+                        <label text="toate traseele urbane" textWrap="true" class="size16" row="1" />
+                        <label text="19 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+            </grid-layout>
+          <Label class="subtitlu" text="Abonamente elevi/studenți" />
+            <grid-layout rows="*" columns="*, *, *">
+                <Card:CardView col="0" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Săptămânal" textWrap="true" class="size16" row="0" />
+                        <label text="toate traseele urbane" textWrap="true" class="size16" row="1" />
+                        <label text="10 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+                <Card:CardView col="1" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Bilunar" textWrap="true" class="size16" row="0" />
+                        <label text="toate traseele urbane" textWrap="true" class="size16" row="1" />
+                        <label text="19 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+                <Card:CardView col="2" margin="10" radius="10">
+                    <grid-layout rows="*, *, *" columns="*" padding="8">
+                        <label text="Lunar" textWrap="true" class="size16" row="0" />
+                        <label text="toate traseele urbane" textWrap="true" class="size16" row="1" />
+                        <label text="31 LEI" textWrap="true" class="title" row="2" />
+                    </grid-layout>
+                </Card:CardView>
+            </grid-layout>
+        </stack-layout>
+    </scroll-view>
+
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>
